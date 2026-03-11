@@ -1,0 +1,269 @@
+/* ------------------------------ */
+/*        BASE GENERAL            */
+/* ------------------------------ */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(to bottom, #f0f7ff, #dbeaff);
+    color: #234;
+    min-height: 100vh;
+}
+
+/* Modo oscuro */
+body.dark {
+    background: linear-gradient(to bottom, #0d1117, #161b22);
+    color: #e6edf3;
+}
+
+/* ------------------------------ */
+/*        TARJETAS / SECTIONS     */
+/* ------------------------------ */
+
+section, header, footer {
+    width: 80%;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 18px;
+
+    background: linear-gradient(to bottom, #ffffff, #e6eef9);
+    border: 1px solid #c8d6ea;
+
+    box-shadow:
+        0 4px 10px rgba(0,0,0,0.15),
+        inset 0 1px 0 rgba(255,255,255,0.8);
+
+    transition: 0.3s;
+}
+
+section:hover, header:hover, footer:hover {
+    box-shadow:
+        0 6px 16px rgba(0,0,0,0.25),
+        inset 0 1px 0 rgba(255,255,255,0.9);
+}
+
+/* Modo oscuro */
+body.dark section,
+body.dark header,
+body.dark footer {
+    background: linear-gradient(to bottom, #1f242c, #2a313c);
+    border: 1px solid #2f3b4a;
+    box-shadow:
+        0 4px 12px rgba(0,0,0,0.6),
+        inset 0 1px 0 rgba(255,255,255,0.05);
+}
+
+/* ------------------------------ */
+/*            HEADER              */
+/* ------------------------------ */
+
+header h1 {
+    margin: 0;
+    text-align: center;
+    font-weight: 700;
+    color: #1a4a8a;
+    text-shadow: 0 1px 0 #fff;
+}
+
+body.dark header h1 {
+    color: #7db7ff;
+    text-shadow: 0 1px 0 #000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 0;
+    list-style: none;
+    margin-top: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 12px;
+
+    background: linear-gradient(to bottom, #6bb6ff, #3a8be0);
+    color: #fff;
+    border: 1px solid #2f6bb5;
+
+    box-shadow:
+        0 3px 6px rgba(0,0,0,0.2),
+        inset 0 1px 0 rgba(255,255,255,0.6);
+
+    transition: 0.2s;
+}
+
+nav a:hover {
+    transform: translateY(-2px);
+}
+
+/* Modo oscuro */
+body.dark nav a {
+    background: linear-gradient(to bottom, #3a8be0, #1f5fa3);
+    border-color: #17497f;
+}
+
+/* ------------------------------ */
+/*              CAJA              */
+/* ------------------------------ */
+
+.caja {
+    padding: 15px;
+    border-radius: 15px;
+
+    background: linear-gradient(to bottom, #ffffff, #e6eef9);
+    border: 1px solid #c8d6ea;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.8),
+        0 2px 6px rgba(0,0,0,0.1);
+}
+
+body.dark .caja {
+    background: linear-gradient(to bottom, #1f242c, #2a313c);
+    border: 1px solid #2f3b4a;
+}
+
+/* ------------------------------ */
+/*           FORMULARIO           */
+/* ------------------------------ */
+
+form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    margin-bottom: 18px;
+    border-radius: 10px;
+    border: 1px solid #aac4e6;
+
+    background: linear-gradient(to bottom, #ffffff, #e8f0fb);
+    color: #234;
+
+    box-shadow:
+        inset 0 1px 3px rgba(0,0,0,0.1),
+        inset 0 0 0 1px rgba(255,255,255,0.8);
+
+    transition: 0.2s;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #5aa0ff;
+    box-shadow:
+        0 0 6px rgba(90,160,255,0.6),
+        inset 0 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Modo oscuro */
+body.dark form input,
+body.dark form textarea {
+    background: linear-gradient(to bottom, #2a313c, #1f242c);
+    border: 1px solid #3a4758;
+    color: #e6edf3;
+}
+
+form button {
+    background: linear-gradient(to bottom, #6bb6ff, #3a8be0);
+    color: #fff;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    cursor: pointer;
+
+    box-shadow:
+        0 4px 10px rgba(0,0,0,0.25),
+        inset 0 1px 0 rgba(255,255,255,0.6);
+
+    transition: 0.2s;
+}
+
+form button:hover {
+    transform: translateY(-2px);
+}
+
+/* Modo oscuro */
+body.dark form button {
+    background: linear-gradient(to bottom, #3a8be0, #1f5fa3);
+}
+
+/* ------------------------------ */
+/*             TABLA              */
+/* ------------------------------ */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table th {
+    background: linear-gradient(to bottom, #6bb6ff, #3a8be0);
+    color: #fff;
+    padding: 12px;
+    text-align: left;
+    font-weight: 600;
+
+    border: 1px solid #2f6bb5;
+}
+
+table td {
+    padding: 12px;
+    background: linear-gradient(to bottom, #ffffff, #e6eef9);
+    border: 1px solid #c8d6ea;
+}
+
+table tr:hover td {
+    background: linear-gradient(to bottom, #f8fbff, #eaf3ff);
+}
+
+/* Modo oscuro */
+body.dark table th {
+    background: linear-gradient(to bottom, #3a8be0, #1f5fa3);
+    border-color: #17497f;
+}
+
+body.dark table td {
+    background: linear-gradient(to bottom, #2a313c, #1f242c);
+    border-color: #2f3b4a;
+}
+
+/* ------------------------------ */
+/*     BOTÓN MODO OSCURO          */
+/* ------------------------------ */
+
+.toggle-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    padding: 10px 14px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+
+    background: linear-gradient(to bottom, #ffffff, #dfe8f5);
+    color: #234;
+
+    box-shadow:
+        0 4px 10px rgba(0,0,0,0.2),
+        inset 0 1px 0 rgba(255,255,255,0.8);
+
+    transition: 0.3s;
+}
+
+.toggle-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Modo oscuro */
+body.dark .toggle-btn {
+    background: linear-gradient(to bottom, #2a313c, #1f242c);
+    color: #e6edf3;
+    box-shadow:
+        0 4px 10px rgba(0,0,0,0.6),
+        inset 0 1px 0 rgba(255,255,255,0.05);
+}

@@ -1,0 +1,301 @@
+/* ------------------------------ */
+/*        BASE GENERAL            */
+/* ------------------------------ */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", "Segoe UI", sans-serif;
+
+    background: #e9fff7;
+    color: #1a1a1a;
+
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    transition: background 0.4s, color 0.4s;
+}
+
+/* Modo oscuro */
+body.dark {
+    background: #0f1a17;
+    color: #e6e6e6;
+}
+
+/* ------------------------------ */
+/*        NEO MINT PANELS         */
+/* ------------------------------ */
+
+section, header, footer {
+    width: 80%;
+    margin: 40px auto;
+    padding: 30px;
+
+    border-radius: 18px;
+
+    background: #ffffffcc;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border: 1px solid #d0f5e8;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.08),
+        inset 0 1px 0 rgba(255,255,255,0.8);
+
+    transition: 0.3s;
+}
+
+section:hover, header:hover, footer:hover {
+    background: #ffffffee;
+}
+
+/* Modo oscuro */
+body.dark section,
+body.dark header,
+body.dark footer {
+    background: #14221fbb;
+    border-color: #2e4a44;
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.6),
+        inset 0 1px 0 rgba(255,255,255,0.05);
+}
+
+body.dark section:hover,
+body.dark header:hover,
+body.dark footer:hover {
+    background: #14221fee;
+}
+
+/* ------------------------------ */
+/*            HEADER              */
+/* ------------------------------ */
+
+header h1 {
+    margin: 0;
+    font-weight: 800;
+    font-size: 2.4rem;
+    text-align: center;
+
+    background: linear-gradient(90deg, #00c896, #7fffd4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+body.dark header h1 {
+    background: linear-gradient(90deg, #7fffd4, #b8ffe8);
+    -webkit-background-clip: text;
+}
+
+/* ------------------------------ */
+/*              NAV               */
+/* ------------------------------ */
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    padding: 0;
+    list-style: none;
+    margin-top: 25px;
+    justify-content: center;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: 600;
+    padding: 12px 22px;
+    border-radius: 14px;
+
+    background: #f0fff9;
+    color: #1a1a1a;
+    border: 1px solid #c8f5e6;
+
+    box-shadow:
+        0 6px 14px rgba(0,0,0,0.08),
+        inset 0 1px 0 rgba(255,255,255,0.7);
+
+    transition: 0.2s;
+}
+
+nav a:hover {
+    background: #e2fff3;
+}
+
+/* Modo oscuro */
+body.dark nav a {
+    background: #1a2e2a;
+    color: #e6e6e6;
+    border-color: #2e4a44;
+    box-shadow:
+        0 6px 14px rgba(0,0,0,0.6),
+        inset 0 1px 0 rgba(255,255,255,0.05);
+}
+
+body.dark nav a:hover {
+    background: #223a35;
+}
+
+/* ------------------------------ */
+/*              CAJA              */
+/* ------------------------------ */
+
+.caja {
+    padding: 20px;
+    border-radius: 14px;
+
+    background: #f6fffb;
+    border: 1px solid #d0f5e8;
+
+    box-shadow:
+        inset 0 2px 4px rgba(0,0,0,0.05),
+        0 2px 6px rgba(0,0,0,0.08);
+}
+
+body.dark .caja {
+    background: #14221f;
+    border-color: #2e4a44;
+    box-shadow:
+        inset 0 2px 4px rgba(0,0,0,0.4),
+        0 2px 6px rgba(0,0,0,0.5);
+}
+
+/* ------------------------------ */
+/*           FORMULARIO           */
+/* ------------------------------ */
+
+form input, form textarea {
+    width: 100%;
+    padding: 14px;
+    margin-top: 6px;
+    margin-bottom: 18px;
+
+    border-radius: 12px;
+    border: 1px solid #c8f5e6;
+
+    background: #ffffff;
+    color: #1a1a1a;
+
+    box-shadow:
+        inset 0 2px 4px rgba(0,0,0,0.05),
+        0 1px 0 rgba(255,255,255,0.7);
+
+    transition: 0.2s;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #00c896;
+    outline: none;
+    box-shadow:
+        0 0 8px rgba(0,200,150,0.4),
+        inset 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Modo oscuro */
+body.dark form input,
+body.dark form textarea {
+    background: #1a2e2a;
+    border-color: #2e4a44;
+    color: #e6e6e6;
+    box-shadow:
+        inset 0 2px 6px rgba(0,0,0,0.4),
+        0 0 6px rgba(0,0,0,0.4);
+}
+
+form button {
+    background: #00c896;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 14px;
+    font-size: 15px;
+    cursor: pointer;
+
+    box-shadow:
+        0 6px 14px rgba(0,0,0,0.15);
+
+    transition: 0.2s;
+}
+
+form button:hover {
+    transform: translateY(-2px);
+}
+
+/* Modo oscuro */
+body.dark form button {
+    background: #7fffd4;
+    color: #0f1a17;
+}
+
+/* ------------------------------ */
+/*             TABLA              */
+/* ------------------------------ */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table th {
+    background: #f0fff9;
+    color: #1a1a1a;
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #c8f5e6;
+}
+
+table td {
+    padding: 12px;
+    border-bottom: 1px solid #d0f5e8;
+}
+
+/* Modo oscuro */
+body.dark table th {
+    background: #1a2e2a;
+    color: #e6e6e6;
+    border-color: #2e4a44;
+}
+
+body.dark table td {
+    border-bottom-color: #2e4a44;
+}
+
+/* ------------------------------ */
+/*     BOTÓN MODO OSCURO          */
+/* ------------------------------ */
+
+.toggle-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+
+    font-size: 22px;
+    padding: 10px 16px;
+    border-radius: 14px;
+    border: 1px solid #c8f5e6;
+    cursor: pointer;
+
+    background: #f0fff9;
+    color: #1a1a1a;
+
+    box-shadow:
+        0 6px 14px rgba(0,0,0,0.15),
+        inset 0 1px 0 rgba(255,255,255,0.7);
+
+    transition: 0.3s;
+}
+
+.toggle-btn:hover {
+    background: #e2fff3;
+}
+
+/* Modo oscuro */
+body.dark .toggle-btn {
+    background: #1a2e2a;
+    color: #e6e6e6;
+    border-color: #2e4a44;
+    box-shadow:
+        0 6px 14px rgba(0,0,0,0.6),
+        inset 0 1px 0 rgba(255,255,255,0.05);
+}

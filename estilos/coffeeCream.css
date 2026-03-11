@@ -1,0 +1,297 @@
+/* ------------------------------ */
+/*        BASE GENERAL            */
+/* ------------------------------ */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", "Segoe UI", sans-serif;
+
+    background: #f7f2ec; /* crema suave */
+    color: #3a2f28;
+
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    transition: background 0.4s, color 0.4s;
+}
+
+/* Modo oscuro */
+body.dark {
+    background: #1a1411;
+    color: #e8dfd7;
+}
+
+/* ------------------------------ */
+/*        COFFEE PANELS           */
+/* ------------------------------ */
+
+section, header, footer {
+    width: 80%;
+    margin: 40px auto;
+    padding: 30px;
+
+    border-radius: 18px;
+
+    background: #fff8f0;
+    border: 1px solid #e2d6c8;
+
+    box-shadow:
+        0 12px 28px rgba(0,0,0,0.08),
+        0 0 40px rgba(180,150,120,0.15);
+
+    transition: 0.3s;
+}
+
+section:hover, header:hover, footer:hover {
+    background: #fff3e6;
+}
+
+/* Modo oscuro */
+body.dark section,
+body.dark header,
+body.dark footer {
+    background: #241c18;
+    border-color: #4a3c33;
+    box-shadow:
+        0 12px 28px rgba(0,0,0,0.6),
+        0 0 40px rgba(120,90,70,0.25);
+}
+
+body.dark section:hover,
+body.dark header:hover,
+body.dark footer:hover {
+    background: #2c231f;
+}
+
+/* ------------------------------ */
+/*            HEADER              */
+/* ------------------------------ */
+
+header h1 {
+    margin: 0;
+    font-weight: 800;
+    font-size: 2.4rem;
+    text-align: center;
+
+    background: linear-gradient(90deg, #8d5a3a, #c49a6c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+body.dark header h1 {
+    background: linear-gradient(90deg, #c49a6c, #e8dfd7);
+    -webkit-background-clip: text;
+}
+
+/* ------------------------------ */
+/*              NAV               */
+/* ------------------------------ */
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    padding: 0;
+    list-style: none;
+    margin-top: 25px;
+    justify-content: center;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: 600;
+    padding: 12px 22px;
+    border-radius: 16px;
+
+    background: #fdf6ee;
+    color: #3a2f28;
+    border: 1px solid #e2d6c8;
+
+    box-shadow:
+        0 6px 14px rgba(0,0,0,0.08),
+        inset 0 1px 0 rgba(255,255,255,0.7);
+
+    transition: 0.2s;
+}
+
+nav a:hover {
+    background: #f7ecdf;
+}
+
+/* Modo oscuro */
+body.dark nav a {
+    background: #2c231f;
+    color: #e8dfd7;
+    border-color: #4a3c33;
+    box-shadow:
+        0 6px 14px rgba(0,0,0,0.6),
+        inset 0 1px 0 rgba(255,255,255,0.05);
+}
+
+body.dark nav a:hover {
+    background: #352b26;
+}
+
+/* ------------------------------ */
+/*              CAJA              */
+/* ------------------------------ */
+
+.caja {
+    padding: 20px;
+    border-radius: 16px;
+
+    background: #fff8f0;
+    border: 1px solid #e2d6c8;
+
+    box-shadow:
+        inset 0 2px 4px rgba(0,0,0,0.05),
+        0 2px 6px rgba(0,0,0,0.08);
+}
+
+body.dark .caja {
+    background: #241c18;
+    border-color: #4a3c33;
+    box-shadow:
+        inset 0 2px 4px rgba(0,0,0,0.4),
+        0 2px 6px rgba(0,0,0,0.5);
+}
+
+/* ------------------------------ */
+/*           FORMULARIO           */
+/* ------------------------------ */
+
+form input, form textarea {
+    width: 100%;
+    padding: 14px;
+    margin-top: 6px;
+    margin-bottom: 18px;
+
+    border-radius: 14px;
+    border: 1px solid #d8c8b8;
+
+    background: #ffffff;
+    color: #3a2f28;
+
+    box-shadow:
+        inset 0 2px 4px rgba(0,0,0,0.05),
+        0 1px 0 rgba(255,255,255,0.7);
+
+    transition: 0.2s;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #c49a6c;
+    outline: none;
+    box-shadow:
+        0 0 8px rgba(196,154,108,0.4),
+        inset 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Modo oscuro */
+body.dark form input,
+body.dark form textarea {
+    background: #1a1411;
+    border-color: #4a3c33;
+    color: #e8dfd7;
+    box-shadow:
+        inset 0 2px 6px rgba(0,0,0,0.4),
+        0 0 6px rgba(0,0,0,0.4);
+}
+
+form button {
+    background: linear-gradient(90deg, #8d5a3a, #c49a6c);
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 16px;
+    font-size: 15px;
+    cursor: pointer;
+
+    box-shadow:
+        0 6px 14px rgba(0,0,0,0.15);
+
+    transition: 0.2s;
+}
+
+form button:hover {
+    transform: translateY(-2px);
+}
+
+/* Modo oscuro */
+body.dark form button {
+    background: linear-gradient(90deg, #c49a6c, #e8dfd7);
+    color: #1a1411;
+}
+
+/* ------------------------------ */
+/*             TABLA              */
+/* ------------------------------ */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table th {
+    background: #fdf6ee;
+    color: #3a2f28;
+    padding: 12px;
+    border: 1px solid #e2d6c8;
+}
+
+table td {
+    padding: 12px;
+    border-bottom: 1px solid #e2d6c8;
+}
+
+/* Modo oscuro */
+body.dark table th {
+    background: #2c231f;
+    color: #e8dfd7;
+    border-color: #4a3c33;
+}
+
+body.dark table td {
+    border-bottom-color: #4a3c33;
+}
+
+/* ------------------------------ */
+/*     BOTÓN MODO OSCURO          */
+/* ------------------------------ */
+
+.toggle-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+
+    font-size: 22px;
+    padding: 10px 16px;
+    border-radius: 16px;
+    border: 1px solid #e2d6c8;
+    cursor: pointer;
+
+    background: #fdf6ee;
+    color: #3a2f28;
+
+    box-shadow:
+        0 6px 14px rgba(0,0,0,0.15),
+        inset 0 1px 0 rgba(255,255,255,0.7);
+
+    transition: 0.3s;
+}
+
+.toggle-btn:hover {
+    background: #f7ecdf;
+}
+
+/* Modo oscuro */
+body.dark .toggle-btn {
+    background: #2c231f;
+    color: #e8dfd7;
+    border-color: #4a3c33;
+    box-shadow:
+        0 6px 14px rgba(0,0,0,0.6),
+        inset 0 1px 0 rgba(255,255,255,0.05);
+}

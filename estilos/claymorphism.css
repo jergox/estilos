@@ -1,0 +1,294 @@
+/* ------------------------------ */
+/*        BASE GENERAL            */
+/* ------------------------------ */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", "Segoe UI", sans-serif;
+
+    background: #f5f7fb;
+    color: #333;
+
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Modo oscuro */
+body.dark {
+    background: #1b1d22;
+    color: #e6e6e6;
+}
+
+/* ------------------------------ */
+/*        CLAY PANELS             */
+/* ------------------------------ */
+
+section, header, footer {
+    width: 80%;
+    margin: 40px auto;
+    padding: 30px;
+
+    border-radius: 30px;
+
+    background: #ffffff;
+    border: none;
+
+    /* Sombras volumétricas Claymorphism */
+    box-shadow:
+        10px 10px 20px rgba(0,0,0,0.1),
+        -10px -10px 20px rgba(255,255,255,0.7);
+
+    transition: 0.3s;
+}
+
+section:hover, header:hover, footer:hover {
+    box-shadow:
+        6px 6px 14px rgba(0,0,0,0.12),
+        -6px -6px 14px rgba(255,255,255,0.8);
+}
+
+/* Modo oscuro */
+body.dark section,
+body.dark header,
+body.dark footer {
+    background: #26282f;
+    box-shadow:
+        10px 10px 20px rgba(0,0,0,0.6),
+        -10px -10px 20px rgba(255,255,255,0.05);
+}
+
+body.dark section:hover,
+body.dark header:hover,
+body.dark footer:hover {
+    box-shadow:
+        6px 6px 14px rgba(0,0,0,0.7),
+        -6px -6px 14px rgba(255,255,255,0.05);
+}
+
+/* ------------------------------ */
+/*            HEADER              */
+/* ------------------------------ */
+
+header h1 {
+    margin: 0;
+    font-weight: 800;
+    font-size: 2.4rem;
+    color: #6a5acd;
+}
+
+body.dark header h1 {
+    color: #b9aaff;
+}
+
+/* ------------------------------ */
+/*              NAV               */
+/* ------------------------------ */
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    padding: 0;
+    list-style: none;
+    margin-top: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: 600;
+    padding: 12px 22px;
+    border-radius: 20px;
+
+    background: #ffffff;
+    color: #444;
+
+    box-shadow:
+        6px 6px 12px rgba(0,0,0,0.1),
+        -6px -6px 12px rgba(255,255,255,0.7);
+
+    transition: 0.2s;
+}
+
+nav a:hover {
+    transform: translateY(-2px);
+}
+
+/* Modo oscuro */
+body.dark nav a {
+    background: #2c2f36;
+    color: #e6e6e6;
+    box-shadow:
+        6px 6px 12px rgba(0,0,0,0.6),
+        -6px -6px 12px rgba(255,255,255,0.05);
+}
+
+/* ------------------------------ */
+/*              CAJA              */
+/* ------------------------------ */
+
+.caja {
+    padding: 20px;
+    border-radius: 25px;
+
+    background: #ffffff;
+
+    box-shadow:
+        inset 6px 6px 12px rgba(0,0,0,0.08),
+        inset -6px -6px 12px rgba(255,255,255,0.7);
+}
+
+body.dark .caja {
+    background: #26282f;
+    box-shadow:
+        inset 6px 6px 12px rgba(0,0,0,0.5),
+        inset -6px -6px 12px rgba(255,255,255,0.05);
+}
+
+/* ------------------------------ */
+/*           FORMULARIO           */
+/* ------------------------------ */
+
+form input, form textarea {
+    width: 100%;
+    padding: 14px;
+    margin-top: 6px;
+    margin-bottom: 18px;
+
+    border-radius: 20px;
+    border: none;
+
+    background: #ffffff;
+    color: #333;
+
+    box-shadow:
+        inset 6px 6px 12px rgba(0,0,0,0.08),
+        inset -6px -6px 12px rgba(255,255,255,0.7);
+
+    transition: 0.2s;
+}
+
+form input:focus, form textarea:focus {
+    outline: none;
+    box-shadow:
+        inset 4px 4px 10px rgba(0,0,0,0.12),
+        inset -4px -4px 10px rgba(255,255,255,0.8);
+}
+
+/* Modo oscuro */
+body.dark form input,
+body.dark form textarea {
+    background: #2c2f36;
+    color: #e6e6e6;
+    box-shadow:
+        inset 6px 6px 12px rgba(0,0,0,0.5),
+        inset -6px -6px 12px rgba(255,255,255,0.05);
+}
+
+form button {
+    background: #6a5acd;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 15px;
+    cursor: pointer;
+
+    box-shadow:
+        6px 6px 12px rgba(0,0,0,0.15),
+        -6px -6px 12px rgba(255,255,255,0.7);
+
+    transition: 0.2s;
+}
+
+form button:hover {
+    transform: translateY(-2px);
+}
+
+/* Modo oscuro */
+body.dark form button {
+    background: #8f7aff;
+    box-shadow:
+        6px 6px 12px rgba(0,0,0,0.6),
+        -6px -6px 12px rgba(255,255,255,0.05);
+}
+
+/* ------------------------------ */
+/*             TABLA              */
+/* ------------------------------ */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table th {
+    background: #ffffff;
+    color: #444;
+    padding: 12px;
+    text-align: left;
+    border-radius: 12px;
+
+    box-shadow:
+        4px 4px 8px rgba(0,0,0,0.08),
+        -4px -4px 8px rgba(255,255,255,0.7);
+}
+
+table td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Modo oscuro */
+body.dark table th {
+    background: #2c2f36;
+    color: #e6e6e6;
+    box-shadow:
+        4px 4px 8px rgba(0,0,0,0.6),
+        -4px -4px 8px rgba(255,255,255,0.05);
+}
+
+body.dark table td {
+    border-bottom-color: #333;
+}
+
+/* ------------------------------ */
+/*     BOTÓN MODO OSCURO          */
+/* ------------------------------ */
+
+.toggle-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+
+    font-size: 22px;
+    padding: 12px 16px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+
+    background: #ffffff;
+    color: #333;
+
+    box-shadow:
+        6px 6px 12px rgba(0,0,0,0.1),
+        -6px -6px 12px rgba(255,255,255,0.7);
+
+    transition: 0.3s;
+}
+
+.toggle-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Modo oscuro */
+body.dark .toggle-btn {
+    background: #2c2f36;
+    color: #e6e6e6;
+    box-shadow:
+        6px 6px 12px rgba(0,0,0,0.6),
+        -6px -6px 12px rgba(255,255,255,0.05);
+}

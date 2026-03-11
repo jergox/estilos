@@ -1,0 +1,294 @@
+/* ------------------------------ */
+/*        BASE GENERAL            */
+/* ------------------------------ */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", "Segoe UI", sans-serif;
+
+    background: #e9f7ef; /* verde muy suave */
+    color: #1f2d22;
+
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    transition: background 0.4s, color 0.4s;
+}
+
+/* Modo oscuro */
+body.dark {
+    background: #0f1a14;
+    color: #d8f5e3;
+}
+
+/* ------------------------------ */
+/*        ORGANIC PANELS          */
+/* ------------------------------ */
+
+section, header, footer {
+    width: 80%;
+    margin: 40px auto;
+    padding: 30px;
+
+    border-radius: 24px;
+
+    background: #ffffffcc;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid #cfe8d8;
+
+    box-shadow:
+        0 12px 28px rgba(0,0,0,0.08),
+        0 0 40px rgba(120,200,150,0.25);
+
+    transition: 0.3s;
+}
+
+section:hover, header:hover, footer:hover {
+    transform: translateY(-2px);
+}
+
+/* Modo oscuro */
+body.dark section,
+body.dark header,
+body.dark footer {
+    background: #16241dcc;
+    border-color: #3a5f4a;
+    box-shadow:
+        0 12px 28px rgba(0,0,0,0.6),
+        0 0 40px rgba(80,150,110,0.35);
+}
+
+/* ------------------------------ */
+/*            HEADER              */
+/* ------------------------------ */
+
+header h1 {
+    margin: 0;
+    font-weight: 800;
+    font-size: 2.4rem;
+    text-align: center;
+
+    background: linear-gradient(90deg, #4caf50, #81c784);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+body.dark header h1 {
+    background: linear-gradient(90deg, #81c784, #b2ffda);
+    -webkit-background-clip: text;
+}
+
+/* ------------------------------ */
+/*              NAV               */
+/* ------------------------------ */
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    padding: 0;
+    list-style: none;
+    margin-top: 25px;
+    justify-content: center;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: 600;
+    padding: 12px 22px;
+    border-radius: 20px;
+
+    background: #f0fff6;
+    color: #1f2d22;
+    border: 1px solid #cfe8d8;
+
+    box-shadow:
+        0 6px 14px rgba(0,0,0,0.08),
+        inset 0 1px 0 rgba(255,255,255,0.7);
+
+    transition: 0.2s;
+}
+
+nav a:hover {
+    background: #e0f7ea;
+}
+
+/* Modo oscuro */
+body.dark nav a {
+    background: #1c2f25;
+    color: #d8f5e3;
+    border-color: #3a5f4a;
+    box-shadow:
+        0 6px 14px rgba(0,0,0,0.6),
+        inset 0 1px 0 rgba(255,255,255,0.05);
+}
+
+body.dark nav a:hover {
+    background: #243f30;
+}
+
+/* ------------------------------ */
+/*              CAJA              */
+/* ------------------------------ */
+
+.caja {
+    padding: 20px;
+    border-radius: 20px;
+
+    background: #f6fff9;
+    border: 1px solid #cfe8d8;
+
+    box-shadow:
+        inset 0 2px 4px rgba(0,0,0,0.05),
+        0 2px 6px rgba(0,0,0,0.08);
+}
+
+body.dark .caja {
+    background: #16241d;
+    border-color: #3a5f4a;
+    box-shadow:
+        inset 0 2px 4px rgba(0,0,0,0.4),
+        0 2px 6px rgba(0,0,0,0.5);
+}
+
+/* ------------------------------ */
+/*           FORMULARIO           */
+/* ------------------------------ */
+
+form input, form textarea {
+    width: 100%;
+    padding: 14px;
+    margin-top: 6px;
+    margin-bottom: 18px;
+
+    border-radius: 16px;
+    border: 1px solid #cfe8d8;
+
+    background: #ffffff;
+    color: #1f2d22;
+
+    box-shadow:
+        inset 0 2px 4px rgba(0,0,0,0.05),
+        0 1px 0 rgba(255,255,255,0.7);
+
+    transition: 0.2s;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #4caf50;
+    outline: none;
+    box-shadow:
+        0 0 8px rgba(76,175,80,0.4),
+        inset 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Modo oscuro */
+body.dark form input,
+body.dark form textarea {
+    background: #1c2f25;
+    border-color: #3a5f4a;
+    color: #d8f5e3;
+    box-shadow:
+        inset 0 2px 6px rgba(0,0,0,0.4),
+        0 0 6px rgba(0,0,0,0.4);
+}
+
+form button {
+    background: #4caf50;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 16px;
+    font-size: 15px;
+    cursor: pointer;
+
+    box-shadow:
+        0 6px 14px rgba(0,0,0,0.15);
+
+    transition: 0.2s;
+}
+
+form button:hover {
+    transform: translateY(-2px);
+}
+
+/* Modo oscuro */
+body.dark form button {
+    background: #81c784;
+    color: #0f1a14;
+}
+
+/* ------------------------------ */
+/*             TABLA              */
+/* ------------------------------ */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table th {
+    background: #f0fff6;
+    color: #1f2d22;
+    padding: 12px;
+    border: 1px solid #cfe8d8;
+}
+
+table td {
+    padding: 12px;
+    border-bottom: 1px solid #cfe8d8;
+}
+
+/* Modo oscuro */
+body.dark table th {
+    background: #1c2f25;
+    color: #d8f5e3;
+    border-color: #3a5f4a;
+}
+
+body.dark table td {
+    border-bottom-color: #3a5f4a;
+}
+
+/* ------------------------------ */
+/*     BOTÓN MODO OSCURO          */
+/* ------------------------------ */
+
+.toggle-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+
+    font-size: 22px;
+    padding: 10px 16px;
+    border-radius: 20px;
+    border: 1px solid #cfe8d8;
+    cursor: pointer;
+
+    background: #f0fff6;
+    color: #1f2d22;
+
+    box-shadow:
+        0 6px 14px rgba(0,0,0,0.15),
+        inset 0 1px 0 rgba(255,255,255,0.7);
+
+    transition: 0.3s;
+}
+
+.toggle-btn:hover {
+    background: #e0f7ea;
+}
+
+/* Modo oscuro */
+body.dark .toggle-btn {
+    background: #1c2f25;
+    color: #d8f5e3;
+    border-color: #3a5f4a;
+    box-shadow:
+        0 6px 14px rgba(0,0,0,0.6),
+        inset 0 1px 0 rgba(255,255,255,0.05);
+}

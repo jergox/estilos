@@ -1,0 +1,296 @@
+/* ------------------------------ */
+/*        BASE GENERAL            */
+/* ------------------------------ */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "JetBrains Mono", "Consolas", monospace;
+
+    background: #d9e8ff;
+    color: #0a1a33;
+
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    transition: background 0.4s, color 0.4s;
+}
+
+/* Modo oscuro */
+body.dark {
+    background: #061224;
+    color: #d9e8ff;
+}
+
+/* ------------------------------ */
+/*        BLUEPRINT PANELS        */
+/* ------------------------------ */
+
+section, header, footer {
+    width: 80%;
+    margin: 40px auto;
+    padding: 30px;
+
+    border-radius: 4px;
+
+    background: #eaf2ff;
+    border: 2px solid #0a1a33;
+
+    box-shadow:
+        0 0 0 2px #0a1a33 inset,
+        0 0 0 6px #ffffff inset;
+
+    transition: 0.3s;
+}
+
+section:hover, header:hover, footer:hover {
+    background: #f4f8ff;
+}
+
+/* Modo oscuro */
+body.dark section,
+body.dark header,
+body.dark footer {
+    background: #0b1f3a;
+    border-color: #d9e8ff;
+    box-shadow:
+        0 0 0 2px #d9e8ff inset,
+        0 0 0 6px #061224 inset;
+}
+
+body.dark section:hover,
+body.dark header:hover,
+body.dark footer:hover {
+    background: #102a4d;
+}
+
+/* ------------------------------ */
+/*            HEADER              */
+/* ------------------------------ */
+
+header h1 {
+    margin: 0;
+    font-weight: 900;
+    font-size: 2.6rem;
+    text-align: center;
+    letter-spacing: 2px;
+
+    color: #0a1a33;
+    text-transform: uppercase;
+}
+
+body.dark header h1 {
+    color: #d9e8ff;
+}
+
+/* ------------------------------ */
+/*              NAV               */
+/* ------------------------------ */
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    padding: 0;
+    list-style: none;
+    margin-top: 25px;
+    justify-content: center;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: 700;
+    padding: 12px 22px;
+    border-radius: 4px;
+
+    background: #d9e8ff;
+    color: #0a1a33;
+    border: 2px solid #0a1a33;
+
+    box-shadow:
+        0 0 0 2px #ffffff inset;
+
+    transition: 0.2s;
+}
+
+nav a:hover {
+    background: #c7dbff;
+}
+
+/* Modo oscuro */
+body.dark nav a {
+    background: #0b1f3a;
+    color: #d9e8ff;
+    border-color: #d9e8ff;
+    box-shadow:
+        0 0 0 2px #061224 inset;
+}
+
+body.dark nav a:hover {
+    background: #102a4d;
+}
+
+/* ------------------------------ */
+/*              CAJA              */
+/* ------------------------------ */
+
+.caja {
+    padding: 20px;
+    border-radius: 4px;
+
+    background: #f4f8ff;
+    border: 2px solid #0a1a33;
+
+    box-shadow:
+        0 0 0 2px #ffffff inset,
+        0 0 0 6px #d9e8ff inset;
+}
+
+body.dark .caja {
+    background: #0b1f3a;
+    border-color: #d9e8ff;
+    box-shadow:
+        0 0 0 2px #061224 inset,
+        0 0 0 6px #0b1f3a inset;
+}
+
+/* ------------------------------ */
+/*           FORMULARIO           */
+/* ------------------------------ */
+
+form input, form textarea {
+    width: 100%;
+    padding: 14px;
+    margin-top: 6px;
+    margin-bottom: 18px;
+
+    border-radius: 4px;
+    border: 2px solid #0a1a33;
+
+    background: #ffffff;
+    color: #0a1a33;
+
+    font-family: inherit;
+
+    box-shadow:
+        0 0 0 2px #d9e8ff inset;
+
+    transition: 0.2s;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #1f4fa3;
+    outline: none;
+    box-shadow:
+        0 0 0 2px #1f4fa3 inset;
+}
+
+/* Modo oscuro */
+body.dark form input,
+body.dark form textarea {
+    background: #061224;
+    border-color: #d9e8ff;
+    color: #d9e8ff;
+    box-shadow:
+        0 0 0 2px #0b1f3a inset;
+}
+
+form button {
+    background: #0a1a33;
+    color: #ffffff;
+    padding: 12px 20px;
+    border: 2px solid #0a1a33;
+    border-radius: 4px;
+    font-size: 15px;
+    cursor: pointer;
+
+    box-shadow:
+        0 0 0 2px #ffffff inset;
+
+    transition: 0.2s;
+}
+
+form button:hover {
+    background: #1f4fa3;
+}
+
+/* Modo oscuro */
+body.dark form button {
+    background: #d9e8ff;
+    color: #061224;
+    border-color: #d9e8ff;
+    box-shadow:
+        0 0 0 2px #061224 inset;
+}
+
+/* ------------------------------ */
+/*             TABLA              */
+/* ------------------------------ */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 0.95rem;
+}
+
+table th {
+    background: #d9e8ff;
+    color: #0a1a33;
+    padding: 12px;
+    border: 2px solid #0a1a33;
+    text-transform: uppercase;
+}
+
+table td {
+    padding: 12px;
+    border: 2px solid #0a1a33;
+}
+
+/* Modo oscuro */
+body.dark table th {
+    background: #0b1f3a;
+    color: #d9e8ff;
+    border-color: #d9e8ff;
+}
+
+body.dark table td {
+    border-color: #d9e8ff;
+}
+
+/* ------------------------------ */
+/*     BOTÓN MODO OSCURO          */
+/* ------------------------------ */
+
+.toggle-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+
+    font-size: 22px;
+    padding: 10px 16px;
+    border-radius: 4px;
+    border: 2px solid #0a1a33;
+    cursor: pointer;
+
+    background: #d9e8ff;
+    color: #0a1a33;
+
+    box-shadow:
+        0 0 0 2px #ffffff inset;
+
+    transition: 0.3s;
+}
+
+.toggle-btn:hover {
+    background: #c7dbff;
+}
+
+/* Modo oscuro */
+body.dark .toggle-btn {
+    background: #0b1f3a;
+    color: #d9e8ff;
+    border-color: #d9e8ff;
+    box-shadow:
+        0 0 0 2px #061224 inset;
+}

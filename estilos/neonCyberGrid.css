@@ -1,0 +1,294 @@
+/* ------------------------------ */
+/*        BASE GENERAL            */
+/* ------------------------------ */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", "Segoe UI", sans-serif;
+
+    background: #0d0d12;
+    color: #e0e0ff;
+
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    background-image:
+        linear-gradient(#1a1a2a 2px, transparent 2px),
+        linear-gradient(90deg, #1a1a2a 2px, transparent 2px);
+    background-size: 40px 40px;
+
+    transition: background 0.4s, color 0.4s;
+}
+
+/* Modo claro */
+body.light {
+    background: #f0f4ff;
+    color: #1a1a2a;
+
+    background-image:
+        linear-gradient(#d0d8ff 2px, transparent 2px),
+        linear-gradient(90deg, #d0d8ff 2px, transparent 2px);
+    background-size: 40px 40px;
+}
+
+/* ------------------------------ */
+/*        CYBER PANELS            */
+/* ------------------------------ */
+
+section, header, footer {
+    width: 80%;
+    margin: 40px auto;
+    padding: 30px;
+
+    border-radius: 12px;
+
+    background: rgba(20, 20, 40, 0.75);
+    backdrop-filter: blur(10px);
+
+    border: 2px solid #7f00ff;
+
+    box-shadow:
+        0 0 20px #7f00ff,
+        inset 0 0 20px rgba(127,0,255,0.4);
+
+    transition: 0.3s;
+}
+
+section:hover, header:hover, footer:hover {
+    box-shadow:
+        0 0 30px #b300ff,
+        inset 0 0 25px rgba(179,0,255,0.5);
+}
+
+/* Modo claro */
+body.light section,
+body.light header,
+body.light footer {
+    background: rgba(255, 255, 255, 0.7);
+    border-color: #7f00ff;
+    box-shadow:
+        0 0 20px #b300ff,
+        inset 0 0 20px rgba(127,0,255,0.3);
+}
+
+/* ------------------------------ */
+/*            HEADER              */
+/* ------------------------------ */
+
+header h1 {
+    margin: 0;
+    font-weight: 900;
+    font-size: 2.6rem;
+    text-align: center;
+
+    background: linear-gradient(90deg, #ff00ff, #00eaff, #7f00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    text-shadow: 0 0 12px rgba(255,0,255,0.6);
+}
+
+/* ------------------------------ */
+/*              NAV               */
+/* ------------------------------ */
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    padding: 0;
+    list-style: none;
+    margin-top: 25px;
+    justify-content: center;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: 700;
+    padding: 12px 22px;
+    border-radius: 10px;
+
+    background: #1a1a2a;
+    color: #e0e0ff;
+    border: 2px solid #00eaff;
+
+    box-shadow:
+        0 0 12px #00eaff,
+        inset 0 0 12px rgba(0,234,255,0.4);
+
+    transition: 0.2s;
+}
+
+nav a:hover {
+    transform: translateY(-2px);
+    box-shadow:
+        0 0 18px #00ffff,
+        inset 0 0 18px rgba(0,255,255,0.5);
+}
+
+/* Modo claro */
+body.light nav a {
+    background: #ffffff;
+    color: #1a1a2a;
+    border-color: #7f00ff;
+    box-shadow:
+        0 0 12px #b300ff,
+        inset 0 0 12px rgba(179,0,255,0.3);
+}
+
+/* ------------------------------ */
+/*              CAJA              */
+/* ------------------------------ */
+
+.caja {
+    padding: 20px;
+    border-radius: 10px;
+
+    background: rgba(20, 20, 40, 0.7);
+    border: 2px solid #ff00ff;
+
+    box-shadow:
+        0 0 14px #ff00ff,
+        inset 0 0 14px rgba(255,0,255,0.4);
+}
+
+body.light .caja {
+    background: rgba(255,255,255,0.8);
+    border-color: #7f00ff;
+    box-shadow:
+        0 0 14px #b300ff,
+        inset 0 0 14px rgba(127,0,255,0.3);
+}
+
+/* ------------------------------ */
+/*           FORMULARIO           */
+/* ------------------------------ */
+
+form input, form textarea {
+    width: 100%;
+    padding: 14px;
+    margin-top: 6px;
+    margin-bottom: 18px;
+
+    border-radius: 8px;
+    border: 2px solid #00eaff;
+
+    background: #0f0f1a;
+    color: #e0e0ff;
+
+    box-shadow:
+        inset 0 0 10px rgba(0,234,255,0.4),
+        0 0 10px rgba(0,234,255,0.4);
+
+    transition: 0.2s;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #ff00ff;
+    box-shadow:
+        0 0 14px #ff00ff,
+        inset 0 0 14px rgba(255,0,255,0.5);
+    outline: none;
+}
+
+/* Modo claro */
+body.light form input,
+body.light form textarea {
+    background: #ffffff;
+    color: #1a1a2a;
+    border-color: #7f00ff;
+}
+
+/* Botón */
+form button {
+    background: linear-gradient(90deg, #ff00ff, #00eaff);
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+
+    box-shadow:
+        0 0 16px #ff00ff,
+        0 0 16px #00eaff;
+
+    transition: 0.2s;
+}
+
+form button:hover {
+    transform: translateY(-2px);
+}
+
+/* ------------------------------ */
+/*             TABLA              */
+/* ------------------------------ */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table th {
+    background: #1a1a2a;
+    color: #e0e0ff;
+    padding: 12px;
+    border: 2px solid #00eaff;
+}
+
+table td {
+    padding: 12px;
+    border: 2px solid #00eaff;
+}
+
+/* Modo claro */
+body.light table th {
+    background: #ffffff;
+    color: #1a1a2a;
+    border-color: #7f00ff;
+}
+
+body.light table td {
+    border-color: #7f00ff;
+}
+
+/* ------------------------------ */
+/*     BOTÓN MODO OSCURO          */
+/* ------------------------------ */
+
+.toggle-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+
+    font-size: 22px;
+    padding: 10px 16px;
+    border-radius: 10px;
+    border: 2px solid #ff00ff;
+    cursor: pointer;
+
+    background: #1a1a2a;
+    color: #e0e0ff;
+
+    box-shadow:
+        0 0 16px #ff00ff,
+        inset 0 0 16px rgba(255,0,255,0.4);
+
+    transition: 0.3s;
+}
+
+.toggle-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Modo claro */
+body.light .toggle-btn {
+    background: #ffffff;
+    color: #1a1a2a;
+    border-color: #7f00ff;
+    box-shadow:
+        0 0 16px #b300ff,
+        inset 0 0 16px rgba(127,0,255,0.3);
+}

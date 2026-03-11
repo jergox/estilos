@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Prueba de Estilos</title>
+
+    <!-- Link que cambia dinámicamente -->
+    <link id="themeStylesheet" rel="stylesheet" href="./estilos/auroraUI.css">
+</head>
+
+<body>
+
+
+<div class="toggle-btn">
+    <button id="darkToggle">🌙</button>
+<!-- Selector de estilos -->
+<label for="styleSelector">Cambiar estilo:</label>
+<select id="styleSelector">
+    <option value="auroraUI.css">auroraUI</option>
+    <option value="bentoGrid.css">bentoGrid</option>
+    <option value="blueprint.css">blueprint</option>
+    <option value="brutalism.css">brutalism</option>
+    <option value="cardboard.css">cardboard</option>
+    <option value="claymorphism.css">claymorphism</option>
+    <option value="coffeeCream.css">coffeeCream</option>
+    <option value="crtRetro.css">crtRetro</option>
+    <option value="cyverY2K.css">cyverY2K</option>
+    <option value="frostedUI.css">frostedUI</option>
+    <option value="frutigerAero.css">frutigerAero</option>
+    <option value="glassmorphism.css">glassmorphism</option>
+    <option value="glossy.css">glossy</option>
+    <option value="holographic.css">holographic</option>
+    <option value="iceberg.css">iceberg</option>
+    <option value="industrial.css">industrial</option>
+    <option value="materialDesing.css">materialDesing</option>
+    <option value="metroUI.css">metroUI</option>
+    <option value="minimalClean.css">minimalClean</option>
+    <option value="monochromeUltraMinimal.css">monochromeUltraMinimal</option>
+    <option value="neoMint.css">neoMint</option>
+    <option value="neonCyberGrid.css">neonCyberGrid</option>
+    <option value="neumorfismo.css">neumorfismo</option>
+    <option value="oceanWave.css">oceanWave</option>
+    <option value="organicLeaf.css">organicLeaf</option>
+    <option value="prisma.css">prisma</option>
+    <option value="retroPixel.css">retroPixel</option>
+    <option value="skeuomorphism.css">skeuomorphism</option>
+    <option value="softPastel.css">softPastel</option>
+    <option value="sunsetGradient.css">sunsetGradient</option>
+    <option value="vaporSoftGlow.css">vaporSoftGlow</option>
+    <option value="vaporWave.css">vaporWave</option>
+    <option value="Xbox360Blades.css">Xbox360Blades</option>
+
+</select>
+    <style>
+        .toggle-btn {
+    border-radius: 0 !important;
+    z-index: 1000;
+}
+    </style>
+</div>
+
+<header>
+    <h1>Mi Web de Pruebas</h1>
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Acerca de</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section>
+    <h2>Sección de Contenido</h2>
+    <div class="caja">
+        <p>Este es un párrafo dentro de un div para probar estilos de cajas, márgenes y paddings.</p>
+    </div>
+</section>
+
+<section>
+    <h2>Formulario de Ejemplo</h2>
+    <form>
+        <label>Nombre:
+            <input type="text" name="nombre">
+        </label>
+        <br><br>
+        <label>Email:
+            <input type="email" name="email">
+        </label>
+        <br><br>
+        <label>Mensaje:
+            <textarea name="mensaje"></textarea>
+        </label>
+        <br><br>
+        <button type="submit">Enviar</button>
+    </form>
+</section>
+
+<section>
+    <h2>Tabla de Ejemplo</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Producto</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Manzanas</td>
+                <td>2€</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>Peras</td>
+                <td>3€</td>
+                <td>2</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<footer>
+    <p>© 2026 Mi Web de Pruebas</p>
+</footer>
+
+<script>
+    // Botón de modo oscuro
+    const btn = document.getElementById("darkToggle");
+    btn.addEventListener("click", () => {
+        document.body.classList.toggle("dark");
+        btn.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+    });
+
+    // Selector de estilos
+    const selector = document.getElementById("styleSelector");
+    const stylesheet = document.getElementById("themeStylesheet");
+
+    selector.addEventListener("change", () => {
+        const selectedStyle = selector.value;
+        stylesheet.href = "./estilos/" + selectedStyle;
+    });
+</script>
+
+</body>
+</html>

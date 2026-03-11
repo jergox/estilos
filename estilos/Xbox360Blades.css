@@ -1,0 +1,280 @@
+/* ------------------------------ */
+/*        BASE GENERAL            */
+/* ------------------------------ */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", sans-serif;
+
+    background: linear-gradient(135deg, #dff3e3, #bfe7d0);
+    color: #0f2a14;
+
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Modo oscuro */
+body.dark {
+    background: linear-gradient(135deg, #0a1a0f, #0f2a14);
+    color: #dfffe8;
+}
+
+/* ------------------------------ */
+/*        BLADE PANELS            */
+/* ------------------------------ */
+
+section, header, footer {
+    width: 80%;
+    margin: 30px auto;
+    padding: 25px;
+
+    border-radius: 20px;
+    transform: skewX(-10deg);
+
+    background: linear-gradient(135deg, #ffffff, #e6f7ec);
+    border: 1px solid #b4d8c0;
+
+    box-shadow:
+        0 6px 12px rgba(0,0,0,0.15),
+        inset 0 1px 0 rgba(255,255,255,0.8);
+
+    transition: 0.3s;
+}
+
+section:hover, header:hover, footer:hover {
+    transform: skewX(-10deg) translateX(5px);
+    box-shadow:
+        0 10px 20px rgba(0,0,0,0.25),
+        inset 0 1px 0 rgba(255,255,255,0.9);
+}
+
+/* Modo oscuro */
+body.dark section,
+body.dark header,
+body.dark footer {
+    background: linear-gradient(135deg, #1a3a24, #0f2a14);
+    border-color: #2f5a3c;
+
+    box-shadow:
+        0 6px 14px rgba(0,0,0,0.6),
+        inset 0 1px 0 rgba(255,255,255,0.05);
+}
+
+/* ------------------------------ */
+/*            HEADER              */
+/* ------------------------------ */
+
+header h1 {
+    margin: 0;
+    transform: skewX(10deg);
+    font-weight: 800;
+    font-size: 2.4rem;
+    color: #1f7f3b;
+    text-shadow: 0 2px 0 #fff;
+}
+
+body.dark header h1 {
+    color: #7cff9a;
+    text-shadow: 0 2px 0 #000;
+}
+
+/* ------------------------------ */
+/*              NAV               */
+/* ------------------------------ */
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0;
+    list-style: none;
+    margin-top: 20px;
+    transform: skewX(10deg);
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: 700;
+    padding: 12px 22px;
+    border-radius: 14px;
+
+    background: linear-gradient(135deg, #1f7f3b, #0f5a28);
+    color: #fff;
+    border: 1px solid #0d4a20;
+
+    box-shadow:
+        0 4px 8px rgba(0,0,0,0.25),
+        inset 0 1px 0 rgba(255,255,255,0.4);
+
+    transition: 0.2s;
+}
+
+nav a:hover {
+    transform: translateX(4px);
+}
+
+/* Modo oscuro */
+body.dark nav a {
+    background: linear-gradient(135deg, #2fa85a, #1f7f3b);
+    border-color: #145a2a;
+}
+
+/* ------------------------------ */
+/*              CAJA              */
+/* ------------------------------ */
+
+.caja {
+    padding: 15px;
+    border-radius: 14px;
+    transform: skewX(10deg);
+
+    background: linear-gradient(135deg, #ffffff, #e6f7ec);
+    border: 1px solid #b4d8c0;
+
+    box-shadow:
+        inset 0 2px 4px rgba(0,0,0,0.1),
+        0 2px 6px rgba(0,0,0,0.15);
+}
+
+body.dark .caja {
+    background: linear-gradient(135deg, #1a3a24, #0f2a14);
+    border-color: #2f5a3c;
+    box-shadow:
+        inset 0 2px 4px rgba(0,0,0,0.5),
+        0 2px 6px rgba(0,0,0,0.6);
+}
+
+/* ------------------------------ */
+/*           FORMULARIO           */
+/* ------------------------------ */
+
+form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    margin-bottom: 18px;
+    border-radius: 10px;
+    border: 1px solid #b4d8c0;
+
+    background: #fff;
+    color: #0f2a14;
+
+    box-shadow:
+        inset 0 2px 4px rgba(0,0,0,0.1),
+        0 1px 0 rgba(255,255,255,0.8);
+
+    transition: 0.2s;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #1f7f3b;
+    outline: none;
+    box-shadow:
+        inset 0 2px 6px rgba(0,0,0,0.2),
+        0 0 6px rgba(31,127,59,0.6);
+}
+
+/* Modo oscuro */
+body.dark form input,
+body.dark form textarea {
+    background: #1a3a24;
+    border-color: #2f5a3c;
+    color: #dfffe8;
+    box-shadow:
+        inset 0 2px 6px rgba(0,0,0,0.5),
+        0 0 6px rgba(0,0,0,0.6);
+}
+
+form button {
+    background: linear-gradient(135deg, #1f7f3b, #0f5a28);
+    color: #fff;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    cursor: pointer;
+
+    box-shadow:
+        0 4px 8px rgba(0,0,0,0.25),
+        inset 0 1px 0 rgba(255,255,255,0.4);
+
+    transition: 0.2s;
+}
+
+form button:hover {
+    transform: translateX(4px);
+}
+
+/* Modo oscuro */
+body.dark form button {
+    background: linear-gradient(135deg, #2fa85a, #1f7f3b);
+}
+
+/* ------------------------------ */
+/*             TABLA              */
+/* ------------------------------ */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    transform: skewX(10deg);
+}
+
+table th {
+    background: linear-gradient(135deg, #1f7f3b, #0f5a28);
+    color: #fff;
+    padding: 12px;
+    text-align: left;
+}
+
+table td {
+    padding: 12px;
+    background: #f9f9f9;
+    border-bottom: 2px solid #d4e8dc;
+}
+
+/* Modo oscuro */
+body.dark table th {
+    background: linear-gradient(135deg, #2fa85a, #1f7f3b);
+}
+
+body.dark table td {
+    background: #1a3a24;
+    border-bottom-color: #2f5a3c;
+}
+
+/* ------------------------------ */
+/*     BOTÓN MODO OSCURO          */
+/* ------------------------------ */
+
+.toggle-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 22px;
+    padding: 10px 14px;
+    border-radius: 14px;
+    border: none;
+    cursor: pointer;
+
+    background: linear-gradient(135deg, #1f7f3b, #0f5a28);
+    color: #fff;
+
+    box-shadow:
+        0 4px 8px rgba(0,0,0,0.25),
+        inset 0 1px 0 rgba(255,255,255,0.4);
+
+    transition: 0.3s;
+}
+
+.toggle-btn:hover {
+    transform: translateX(4px);
+}
+
+/* Modo oscuro */
+body.dark .toggle-btn {
+    background: linear-gradient(135deg, #2fa85a, #1f7f3b);
+    color: #000;
+}

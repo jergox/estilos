@@ -1,0 +1,215 @@
+/* ------------------------------ */
+/*        BASE GENERAL            */
+/* ------------------------------ */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: #e0e0e0;
+    color: #333;
+    min-height: 100vh;
+
+    --light-shadow: #ffffff;
+    --dark-shadow: #b8b8b8;
+}
+
+/* ------------------------------ */
+/*        MODO OSCURO             */
+/* ------------------------------ */
+
+body.dark {
+    background: #1f1f1f;
+    color: #f0f0f0;
+
+    --light-shadow: #2d2d2d;
+    --dark-shadow: #000000;
+}
+
+/* ------------------------------ */
+/*        TARJETAS / SECTIONS     */
+/* ------------------------------ */
+
+section, header, footer {
+    width: 80%;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 20px;
+
+    background: inherit;
+    box-shadow:
+        8px 8px 16px var(--dark-shadow),
+        -8px -8px 16px var(--light-shadow);
+
+    transition: 0.3s;
+}
+
+section:hover, header:hover, footer:hover {
+    box-shadow:
+        12px 12px 24px var(--dark-shadow),
+        -12px -12px 24px var(--light-shadow);
+}
+
+/* ------------------------------ */
+/*            HEADER              */
+/* ------------------------------ */
+
+header h1 {
+    margin: 0;
+    text-align: center;
+    font-weight: 600;
+    color: inherit;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 0;
+    list-style: none;
+    margin-top: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 500;
+    padding: 10px 18px;
+    border-radius: 12px;
+
+    background: inherit;
+    box-shadow:
+        6px 6px 12px var(--dark-shadow),
+        -6px -6px 12px var(--light-shadow);
+
+    transition: 0.2s;
+}
+
+nav a:hover {
+    transform: translateY(-2px);
+}
+
+/* ------------------------------ */
+/*              CAJA              */
+/* ------------------------------ */
+
+.caja {
+    padding: 15px;
+    border-radius: 15px;
+
+    background: inherit;
+    box-shadow:
+        inset 6px 6px 12px var(--dark-shadow),
+        inset -6px -6px 12px var(--light-shadow);
+}
+
+/* ------------------------------ */
+/*           FORMULARIO           */
+/* ------------------------------ */
+
+form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    margin-bottom: 18px;
+    border-radius: 12px;
+    border: none;
+    font-size: 15px;
+
+    background: inherit;
+    color: inherit;
+
+    box-shadow:
+        inset 6px 6px 12px var(--dark-shadow),
+        inset -6px -6px 12px var(--light-shadow);
+
+    transition: 0.2s;
+}
+
+form input:focus, form textarea:focus {
+    outline: none;
+    box-shadow:
+        inset 4px 4px 8px var(--dark-shadow),
+        inset -4px -4px 8px var(--light-shadow);
+}
+
+form button {
+    background: inherit;
+    color: inherit;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    cursor: pointer;
+
+    box-shadow:
+        6px 6px 12px var(--dark-shadow),
+        -6px -6px 12px var(--light-shadow);
+
+    transition: 0.2s;
+}
+
+form button:hover {
+    transform: translateY(-2px);
+}
+
+/* ------------------------------ */
+/*             TABLA              */
+/* ------------------------------ */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table th, table td {
+    padding: 12px;
+    border-radius: 12px;
+    margin: 6px 0;
+
+    background: inherit;
+    color: inherit;
+
+    box-shadow:
+        inset 4px 4px 8px var(--dark-shadow),
+        inset -4px -4px 8px var(--light-shadow);
+}
+
+/* ------------------------------ */
+/*             FOOTER             */
+/* ------------------------------ */
+
+footer p {
+    text-align: center;
+    margin: 0;
+    color: inherit;
+}
+
+/* ------------------------------ */
+/*     BOTÓN MODO OSCURO          */
+/* ------------------------------ */
+
+.toggle-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    padding: 10px 14px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+
+    background: inherit;
+    color: inherit;
+
+    box-shadow:
+        6px 6px 12px var(--dark-shadow),
+        -6px -6px 12px var(--light-shadow);
+
+    transition: 0.3s;
+}
+
+.toggle-btn:hover {
+    transform: translateY(-2px);
+}
