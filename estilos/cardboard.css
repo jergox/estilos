@@ -23,13 +23,51 @@ body.dark {
 }
 
 /* ------------------------------ */
-/*        TEXTURA CARTÓN          */
+/*   TEXTURA CARTÓN  */
 /* ------------------------------ */
 
 :root {
-    --cardboard-light: url('https://i.imgur.com/8pVQf8T.png');
-    --cardboard-dark: url('https://i.imgur.com/8pVQf8T.png'); /* misma textura, más oscura con overlay */
+    /* Cartón claro */
+    --cardboard-light:
+        repeating-linear-gradient(
+            90deg,
+            rgba(0,0,0,0.04) 0px,
+            rgba(0,0,0,0.04) 2px,
+            rgba(0,0,0,0.02) 4px
+        ),
+        repeating-linear-gradient(
+            0deg,
+            rgba(255,255,255,0.05) 0px,
+            rgba(255,255,255,0.05) 3px,
+            rgba(0,0,0,0.03) 6px
+        ),
+        linear-gradient(
+            0deg,
+            #f3e7d3,
+            #f0e2c8
+        );
+
+    /* Cartón oscuro */
+    --cardboard-dark:
+        repeating-linear-gradient(
+            90deg,
+            rgba(255,255,255,0.04) 0px,
+            rgba(255,255,255,0.04) 2px,
+            rgba(0,0,0,0.1) 4px
+        ),
+        repeating-linear-gradient(
+            0deg,
+            rgba(255,255,255,0.03) 0px,
+            rgba(255,255,255,0.03) 3px,
+            rgba(0,0,0,0.15) 6px
+        ),
+        linear-gradient(
+            0deg,
+            #2a241e,
+            #241f19
+        );
 }
+
 
 /* ------------------------------ */
 /*        CARD PANELS             */
